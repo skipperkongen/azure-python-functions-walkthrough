@@ -2,7 +2,11 @@
 
 Here is a quick walkthrough for how to create a Python based Azure Functions app.
 After completing the steps you will have a Python function hosted in the Azure cloud
-that you can call via HTTP, e.g. with curl. 
+that you can call via HTTP, e.g. with curl.
+
+> Disclaimer: at the time of writing it seems that Azure API Management does
+not support Functions written in Python. It is my expectation that this problem
+will resolve itself swiftly.
 
 ## Create function
 
