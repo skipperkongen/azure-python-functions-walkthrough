@@ -49,10 +49,9 @@ This creates the structure:
 └── Pipfile.lock
 ```
 
-Test function locally:
+Test function locally (in `HelloApp` directory):
 
 ```
-# in directory HelloApp
 func host start
 # Test with GET
 curl http://localhost:7071/api/HttpTrigger?name=Bob
@@ -60,19 +59,17 @@ curl http://localhost:7071/api/HttpTrigger?name=Bob
 curl -H 'content-type' -d '{"name": "Bob"}' http://localhost:7071/api/HttpTrigger?name=Bob
 ```
 
-(Optional) change the code of the function.
+(Optional) change the code of the function (in `HelloApp` directory):
 
 ```
-# in directory HelloApp
 vi HttpTrigger/__init__.py  # use editor of choice
 ```
 
 ## Deploy function to Azure
 
+Create resources and deploy function (in `HelloApp` directory):
+
 ```
-# in directory HelloApp
-
-
 az login
 
 # The ID you choose will be used to name resource groups etc.
