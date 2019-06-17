@@ -84,7 +84,7 @@ az functionapp create --resource-group $UNIQUE_ID_FOR_APP --os-type Linux \
 --consumption-plan-location westeurope  --runtime python \
 --name $UNIQUE_ID_FOR_APP --storage-account $UNIQUE_ID_FOR_APP
 
-func azure functionapp publish
+func azure functionapp publish $UNIQUE_ID_FOR_APP
 ```
 
 Test your freshly deployed function:
