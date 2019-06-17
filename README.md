@@ -60,8 +60,7 @@ curl http://localhost:7071/api/HttpTrigger?name=Bob
 curl -H 'content-type' -d '{"name": "Bob"}' http://localhost:7071/api/HttpTrigger?name=Bob
 ```
 
-(Optional) change the code of the function. By default it's takes a name as input
-and returns the message `Hello {name}`.
+(Optional) change the code of the function.
 
 ```
 # in directory HelloApp
