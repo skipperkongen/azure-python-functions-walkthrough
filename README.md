@@ -67,14 +67,18 @@ vi HttpTrigger/__init__.py  # use editor of choice
 
 ## Deploy function to Azure
 
-Create resources (one time only):
+Log into Azure and set app name:
 
 ```
 az login
 
 # The ID you choose will be used to name resource groups etc.
 UNIQUE_ID_FOR_APP=<some unique name, e.g. helloapp777>
+```
 
+Create resources (one time only):
+
+```
 az group create --name $UNIQUE_ID_FOR_APP --location westeurope
 
 az storage account create --name $UNIQUE_ID_FOR_APP --location westeurope \
