@@ -17,14 +17,14 @@ Initialise project:
 mkdir azure-functions-hello
 cd azure-functions-hello
 pyenv local 3.6.8
-pipenv install
-func init HelloApp
+pipenv install azure
+pipenv shell
+func init
 ```
 
 Create a function:
 
 ```
-cd HelloApp
 # Create new function
 # Choose option 5, i.e. HTTP trigger, and leave the default name (HttpTrigger)
 func new
@@ -35,7 +35,7 @@ This creates the structure:
 ```
 .
 ├── .python-version
-├── HelloApp
+├── azure-functions-hello
 │   ├── .gitignore
 │   ├── .vscode
 │   │   └── extensions.json
@@ -49,7 +49,7 @@ This creates the structure:
 └── Pipfile.lock
 ```
 
-Test function locally (in `HelloApp` directory):
+Test function locally (in `azure-functions-hello` directory):
 
 ```
 func host start
@@ -59,7 +59,7 @@ curl http://localhost:7071/api/HttpTrigger?name=Bob
 curl -H 'content-type' -d '{"name": "Bob"}' http://localhost:7071/api/HttpTrigger?name=Bob
 ```
 
-(Optional) change the code of the function (in `HelloApp` directory):
+(Optional) change the code of the function (in `azure-functions-hello` directory):
 
 ```
 vi HttpTrigger/__init__.py  # use editor of choice
@@ -67,7 +67,7 @@ vi HttpTrigger/__init__.py  # use editor of choice
 
 ## Deploy function to Azure
 
-Create resources and deploy function (in `HelloApp` directory):
+Create resources and deploy function (in `azure-functions-hello` directory):
 
 ```
 az login
