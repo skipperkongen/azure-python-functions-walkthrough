@@ -67,7 +67,7 @@ vi HttpTrigger/__init__.py  # use editor of choice
 
 ## Deploy function to Azure
 
-Create resources (first time):
+Create resources (one time only):
 
 ```
 az login
@@ -85,7 +85,7 @@ az functionapp create --resource-group $UNIQUE_ID_FOR_APP --os-type Linux \
 --name $UNIQUE_ID_FOR_APP --storage-account $UNIQUE_ID_FOR_APP
 ```
 
-Deploy function:
+Deploy function (every time):
 
 ```
 func azure functionapp publish $UNIQUE_ID_FOR_APP
